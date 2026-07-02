@@ -1,6 +1,4 @@
-# De-La-Puerta-A-Tu-Casa
-servicio de reparto a domicilio 
-<!DOCTYPE html>
+
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -467,40 +465,31 @@ servicio de reparto a domicilio
 
 <div id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal-content">
-
     <span class="close" onclick="closeModal()" role="button" tabindex="0" aria-label="Cerrar">✕</span>
-
     <h2 id="modalTitle">🧾 Tu pedido</h2>
     <div id="cartList"></div>
-
     <div class="cart-total-line">
       <span>Total</span>
       <span>$<span id="modalTotal">0</span></span>
     </div>
-
     <label for="name">Nombre</label>
     <input type="text" id="name" placeholder="Tu nombre completo">
     <p class="field-error" id="nameError"></p>
-
     <label for="address">Dirección</label>
     <input type="text" id="address" placeholder="Calle, número, colonia">
     <p class="field-error" id="addressError"></p>
-
     <label for="references">Referencias (opcional)</label>
     <textarea id="references" placeholder="Ej. casa color azul, junto a la tienda..."></textarea>
-
     <label for="payment">Forma de pago</label>
     <select id="payment" onchange="togglePaymentFields()">
       <option value="Efectivo">Efectivo</option>
       <option value="Transferencia">Transferencia</option>
     </select>
-
     <div id="cash-field">
       <label for="cash">¿Con cuánto paga?</label>
       <input type="number" id="cash" placeholder="Ej. 200" min="0" oninput="calculateChange()">
       <p id="changeText"></p>
     </div>
-
     <button id="sendBtn" onclick="sendWhatsApp()">Enviar pedido por WhatsApp</button>
     <p id="formMsg"></p>
 
